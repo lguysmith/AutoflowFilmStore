@@ -1,0 +1,52 @@
+<main class="container">
+  <h2>Autoflow Film Store</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Released</th>
+        <th scope="col">Director</th>
+        <th scope="col">Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (film of films(); track film.id) {
+        <tr>
+          <th>{{ film.title }}</th>
+          <td>{{ film.releaseYear }}</td>
+          <td>{{ film.director }}</td>
+          <td>{{ film.ratingOutOfTen }} / 10</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+  <hr class="border border-primary border-3 opacity-75 mt-5 mb-5">
+  <h4>Add Film</h4>
+  <form [formGroup]="filmForm" (ngSubmit)="addFilm()">
+    <div class="mb-3">
+      <label for="title" class="form-label">Title:</label>
+      <input type="text" formControlName="title" id="title" required class="form-control" placeholder="title">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Release Year:</label>
+      <input tabindex="1" type="text" formControlName="releaseYear" id="releaseYear" required class="form-control" placeholder="Release Year">
+    </div>
+
+    
+    <div class="mb-3">
+      <label class="form-label">Directer:</label>
+      <input type="text" formControlName="director" id="director" required class="form-control" placeholder="Director">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Rating (X out of 10):</label>
+      <input type="text" formControlName="rating" id="rating" required class="form-control" placeholder="Rating (X out of 10)">
+    </div>
+
+    <button type="submit" class="btn btn-primary mb-3">Ad Film</button>
+  </form>
+
+</main>
+
+<router-outlet />

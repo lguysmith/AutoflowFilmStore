@@ -1,0 +1,5 @@
+  @media only screen and (max-width: 475px) {
+    .btn {
+      width: 150% !important;
+    }
+  }
