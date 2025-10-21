@@ -5,7 +5,7 @@ We’ve provided a website that has been built to meet the acceptance criteria d
 
 You should aim to spend no more than 1–2 hours on this task. If you run out of time, rather than spend longer, you may discuss with us in the interview the addional work you would have done. You’re welcome to use AI tools to assist you, but please note that we’ll ask questions during the review to assess your understanding of the code and the approach you’ve taken. 
 
-## The Exercise
+## The Website
 The AutoFlow Film Store website allows users to view a list of films with information about the year it was released, the name of the director, and it’s rating. It also includes functionality to add new film entries to the collection.
 
 **Scenario: Films list**
