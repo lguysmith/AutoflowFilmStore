@@ -3,3 +3,7 @@
       width: 150% !important;
     }
   }
+
+  .errorText {
+    color: red;
+  }
