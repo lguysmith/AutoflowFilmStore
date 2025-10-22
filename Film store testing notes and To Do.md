@@ -1,4 +1,4 @@
-I have written Playwright tests (with assistance from Copilot) to cover the requirements outlined in the README. I also performed manual accessibility checks on the page, which are documented in a separate defect report.
+I have written Playwright tests (with assistance from Copilot) to cover the requirements outlined in the README. I also performed manual accessibility checks on the page. They are documented in a separate defect report.
 
 To ensure Playwright is set up correctly after downloading the repo, make sure Playwright and its browsers are installed:
 
