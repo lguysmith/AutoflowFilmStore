@@ -13,6 +13,46 @@ export class FilmStorePage extends BasePage {
     return this.page.locator('tbody');
   }
 
+  get addFilmSection(): Locator {
+    return this.page.getByRole('heading', { name: 'Add Film' });
+  }
+
+  get titleInput(): Locator {
+    return this.page.getByRole('textbox', { name: 'Title:' });
+  }
+
+  get yearInput(): Locator {
+    return this.page.getByRole('textbox', { name: 'Release Year' });
+  }
+
+  get directorInput(): Locator {
+    return this.page.getByRole('textbox', { name: 'Director' });
+  }
+
+  get ratingInput(): Locator {
+    return this.page.getByRole('textbox', { name: 'Rating (X out of 10)' });
+  }
+
+  get addFilmButton(): Locator {
+    return this.page.getByRole('button', { name: 'Ad Film' }); // Note: 'Ad Film' button has a typo in the name
+  }
+  //there is currently only an error for the title field. The others should be added by the developer
+  get titleError(): Locator {
+    return this.page.getByText('please enter a title');
+  }
+
+  get yearError(): Locator {
+    return this.page.locator('#year-error');
+  }
+
+  get directorError(): Locator {
+    return this.page.locator('#director-error');
+  }
+
+  get ratingError(): Locator {
+    return this.page.locator('#rating-error');
+  }
+
   async getFilmRows(): Promise<FilmRow[]> {
     const rows = this.tableBody.locator('tr');
     const count = await rows.count();
